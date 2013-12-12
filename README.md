@@ -34,7 +34,7 @@ Compile the system by the command
 
 The run the system by the command 
 
-'java Gendata <interval> <n>' '
+'java Gendata #interval #n'
 
 The arguments are: 
 
@@ -44,11 +44,12 @@ n: Number of datapoints generated.
 
 It is also possible to call Collectdata directly like this 
 
-'Collectdata <time> <val>'
+'Collectdata #time #val'
 
 The arguments are: 
 
 time: Timestamp of datapoint in 'epoch' format. 
+
 val: some integer value. 
 
 ## Setup web app ##
