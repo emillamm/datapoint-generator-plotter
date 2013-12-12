@@ -1,7 +1,10 @@
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import org.ini4j.Wini;
 
 /*
  * Collects data from input arguments
@@ -11,6 +14,23 @@ import java.sql.SQLException;
 public class Collectdata {
 
 	public static void main(String[] args) {
+		/*
+		 * Retrieve data from INI file
+		 */
+		Wini ini = null; 
+		File inifile; 
+		try{
+		inifile = new File("constants.ini"); 
+		ini = new Wini(inifile);
+		}catch (Exception e){
+			System.err.println("Unable to load ini file");
+			e.printStackTrace(); 
+		}
+		String host = ini.get("DBinfo", "host");
+		String dbname = ini.get("DBinfo", "dbname");
+		String port = ini.get("DBinfo", "port");
+        String user = ini.get("DBinfo", "user");
+        String password = ini.get("DBinfo", "password");
 		/*
 		 * Do some error checking on arguments
 		 */
@@ -44,9 +64,7 @@ public class Collectdata {
 		 */
 		Connection con = null;
 		PreparedStatement pst = null;
-		String url = "jdbc:mysql://localhost:8889/hackerati";
-		String user = "emil";
-		String password = "mrmemorex";
+		String url = "jdbc:mysql://" + host + ":" + port + "/" + dbname;
 
 		/*
 		 * Insert values into the 'datapoint' table
