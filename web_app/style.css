@@ -1,0 +1,46 @@
+
+h1 {
+	font-family: "Futura"; 
+	font-size: 30px; 
+}
+
+h2 {
+	font-family: "Futura"; 
+	font-size: 15px; 
+}
+
+body {
+	background-color: #C2E1B7;
+	color: #231F20; 
+	text-align: center;
+	max-width: 1200px; 
+}
+
+#placeholder {
+	width: 100%; 
+	height: 600px; 
+}
+
+/* Table layout from: http://www.textfixer.com/resources/css-tables.php */
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
