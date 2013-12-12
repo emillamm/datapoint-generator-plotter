@@ -20,8 +20,8 @@ public class Collectdata {
 		Wini ini = null; 
 		File inifile; 
 		try{
-		inifile = new File("constants.ini"); 
-		ini = new Wini(inifile);
+			inifile = new File("constants.ini"); 
+			ini = new Wini(inifile);
 		}catch (Exception e){
 			System.err.println("Unable to load ini file");
 			e.printStackTrace(); 
@@ -29,15 +29,15 @@ public class Collectdata {
 		String host = ini.get("DBinfo", "host");
 		String dbname = ini.get("DBinfo", "dbname");
 		String port = ini.get("DBinfo", "port");
-        String user = ini.get("DBinfo", "user");
-        String password = ini.get("DBinfo", "password");
+		String user = ini.get("DBinfo", "user");
+		String password = ini.get("DBinfo", "password");
 		/*
 		 * Do some error checking on arguments
 		 */
 		if (args.length != 2){
 			throw new IllegalArgumentException("You must supply 2 arguments"); 
 		}
-		
+
 		String arg0 = args[0];
 		String arg1 = args[1];
 
