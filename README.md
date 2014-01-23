@@ -1,10 +1,10 @@
-hackerati-assignment
+datapoint-sample-project
 ====================
 
-Assignment for Hackerati
+Sample project: Generate and plot datapoints
 
 ## About ##
-This assignment consists of a system that generates datapoints and stores them in a database. It also consists of a web app that can display the data at different intervals. 
+This sample project consists of a system that generates one-dimensional datapoints and stores them in a database. It also consists of a web app that can display the data at different user specified intervals. 
 
 ## Initial setup ##
 This assignment needs a MySQL database. 
